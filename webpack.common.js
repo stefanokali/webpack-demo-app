@@ -18,6 +18,14 @@ module.exports = {
           "sass-loader", //1.Turns sass into css
         ],
       },
+      { test: /\.html$/, use: ["html-loader"] },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: "file-loader",
+        options: {
+          name: "imgs/[name].[ext]",
+        },
+      },
     ],
   },
 };
